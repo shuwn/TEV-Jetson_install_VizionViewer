@@ -3,8 +3,6 @@ Description=install VizionViewer service
 
 [Service]
 Type=oneshot
-StandardOutput=tty
-TTYPath=/dev/ttyTCU0
 ExecStartPre=/bin/sleep 10
 ExecStart=/bin/bash /usr/sbin/install_vizionviewer.sh
 ExecStartPost=/bin/systemctl disable install_vizionviewer.service

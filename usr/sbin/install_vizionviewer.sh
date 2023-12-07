@@ -1,8 +1,9 @@
 #!/bin/sh
 
-echo '***********************************'
-echo 'Install VizionViewer START'
-echo '***********************************'
+echo '' > /dev/ttyTCU0
+echo '***********************************' > /dev/ttyTCU0
+echo 'Install VizionViewer START' > /dev/ttyTCU0
+echo '***********************************' > /dev/ttyTCU0
 
 cd /usr/share/vizionviewer/
 TAR_FILE=$(find -name "*vizionviewer*.tar.xz")
@@ -24,6 +25,6 @@ sudo -u ubuntu DISPLAY=$(w| tr -s ' '| cut -d ' ' -f 3|grep :) \
 	gsettings set org.gnome.shell favorite-apps \
 	"[ 'vizionviewer.desktop', $(gsettings get org.gnome.shell favorite-apps | sed s/.//)"
 
-echo '***********************************'
-echo 'Install VizionViewer FINISH!!!'
-echo '***********************************'
+echo '***********************************' > /dev/ttyTCU0
+echo 'Install VizionViewer FINISH!!!' > /dev/ttyTCU0
+echo '***********************************' > /dev/ttyTCU0
